@@ -1,0 +1,5 @@
+package br.com.unievangelica.ftt.core.service;
+
+public abstract class AbstractService {
+
+}

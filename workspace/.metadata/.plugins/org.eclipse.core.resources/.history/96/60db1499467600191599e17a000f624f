@@ -1,0 +1,10 @@
+package br.com.unievangelica.ftt.domain.pais;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "pais")
+public class Pais {
+	
+}

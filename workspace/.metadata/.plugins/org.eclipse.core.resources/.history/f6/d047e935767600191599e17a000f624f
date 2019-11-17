@@ -1,0 +1,51 @@
+package br.com.unievangelica.ftt.domain.carro;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+
+
+
+import br.com.unievangelica.ftt.core.entity.AbstractEntity;
+import br.com.unievangelica.ftt.domain.garagem.Garagem;
+
+@Entity
+@Table(name = "carro")
+public class Carro extends AbstractEntity{
+	
+	private static final long serialVersionUID = 1L;
+	
+	@NotEmpty
+	@Column(name = "fabricante", length = 50, nullable = false)
+	private String fabricante;
+	
+	@NotEmpty
+	@Column(name = "modelo", length = 30, nullable = false)
+	private String modelo;
+	
+	@NotEmpty
+	@Column(name = "versao", length = 20, nullable = false)
+	private String versao;
+	
+	@NotEmpty
+	@Column(name = "descricao", length = 100, nullable = false)
+	private String descricao;
+	
+	@NotEmpty
+	@Column(name = "cor", length = 15, nullable = false)
+	private String cor;
+	
+	@NotEmpty
+	@Column(name = "valor", length = 10, nullable = false)
+	private String valor;
+	
+	@ManyToOne
+	@JoinColumn(name = "garagem_id", referencedColumnName = "id")
+	private Garagem garagem;
+
+
+}

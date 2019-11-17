@@ -1,0 +1,16 @@
+package br.com.unievangelica.ftt.domain.carro;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import br.com.unievangelica.ftt.core.entity.AbstractEntity;
+
+@Entity
+@Table(name = "carro")
+public class Carro extends AbstractEntity{
+	
+	private static final long serialVersionUID = 1L;
+	
+	
+
+}
