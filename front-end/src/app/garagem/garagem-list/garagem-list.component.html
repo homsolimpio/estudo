@@ -1,8 +1,13 @@
-<h3 class="page-title">Garagem</h3>
+<div>
+  <h3 class="page-title">Garagem</h3>
+  <div>
 
-<button class="btn btn-primary m-3" routerLink="/garagem/novo">
-  Cadastrar
-</button>
+    <button class="btn btn-primary m-3" routerLink="/garagem/novo">
+      Cadastrar 
+    </button>
+  </div>
+
+</div>
 
 <table class="table table-bordered">
   <thead>
@@ -14,7 +19,7 @@
   <tbody>
     <tr *ngFor="let garagem of garagens">
       <td>{{ garagem.nome }}</td>
-      <td>
+      <td class="align">
         <button class="btn btn-secondary" [routerLink]="['/garagem/editar', garagem.id]">
           Editar
         </button>

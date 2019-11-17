@@ -1,4 +1,4 @@
-<h1 class="page-title">Pais</h1>
+<h3 class="page-title">Pais</h3>
 
 <button class="btn btn-primary mb-3" routerLink="/pais/novo">Cadastrar</button>
 
@@ -15,10 +15,10 @@
   <!-- corpo da tabela -->
   <tbody>
     <tr *ngFor="let pais of paises">
-      <td><button [routerLink]="['/pais/visualizar', pais.id]" class="btn btn-link">{{ pais.nome }}</button></td>
-      <td>
-        <button [routerLink]="['/pais/editar', pais.id]" class="btn btn-link">Editar</button>
-        <button (click)="onDelete(pais.id)" class="btn btn-link">Deletar</button>
+      <td>{{ pais.nome }}</td>
+      <td class="align">
+        <button [routerLink]="['/pais/editar', pais.id]" class="btn btn-secondary">Editar</button>
+        <button (click)="onDelete(pais.id)" class="btn btn-danger">Deletar</button>
 
       </td>
     </tr>

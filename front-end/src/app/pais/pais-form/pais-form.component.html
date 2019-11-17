@@ -1,4 +1,4 @@
-<h1 class="page-title">{{titulo}}</h1>
+<h3 class="page-title">{{titulo}}</h3>
 
 <form [formGroup]="paisForm">
 
@@ -7,7 +7,7 @@
     <!-- Criar uma nova linha-->
     <div class="row">
       <!--criar colunas-->
-      <div class="col-md-12 col-lg-6">
+      <div class="col-md-12 col-lg-12">
       <!--Usando o field-->
         <field label="Nome" required="true">
           <input type="text" class="form-control" formControlName="nome">
@@ -16,15 +16,12 @@
     </div>
 
   </div>
-  <div class="panel-footer" >
-
-    <button class="btn btn-primary" [routerLink]="['/pais/editar', pais.id]"
-    *ngIf="paisForm.disabled">Editar</button>
+  <div class="align panel-footer" >
 
     <button class="btn btn-success" (click)="onSave(paisForm.value)"
     *ngIf="!paisForm.disabled">Salvar</button>
 
-    <button class="btn btn-default ml-2"
+    <button class="btn btn-secondary ml-2"
     routerLink="/pais">Cancelar</button>
   </div>
 </div>

@@ -6,3 +6,6 @@ thead th {
     border-bottom: 1px solid #333; 
     text-align: center; 
 }
+button{
+    margin-left: 5px;
+}

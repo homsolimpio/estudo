@@ -1,4 +1,4 @@
-<h1 class="page-title">Lista de Carros</h1>
+<h3 class="page-title">Lista de Carros</h3>
 
 <button class="btn btn-primary m-3" routerLink="/carro/novo">
   Cadastrar
@@ -24,21 +24,21 @@
   </thead>
   <tbody>
     <tr *ngFor="let carro of carros">
-      <td><button class="btn btn-link"[routerLink]="['/carro/visualizar', carro.id]">
-        {{ carro.id }}</button></td>
+      <td [routerLink]="['/carro/visualizar', carro.id]">
+        {{ carro.id }}</td>
       <td>{{ carro.fabricante }}</td>
       <td>{{ carro.modelo }}</td>
       <td>{{ carro.versao }}</td>
       <td>{{ carro.descricao }}</td>
       <td>{{ carro.cor }}</td>
       <td>{{ carro.valor }}</td>
-      <td><button class="btn btn-link">{{ carro.garagem.nome }}</button></td>
-      <td>
-        <button class="btn btn-link" [routerLink]="['/carro/editar', carro.id]">
+      <td>{{ carro.garagem.nome }}</td>
+      <td class="align">
+        <button class="btn btn-secondary" [routerLink]="['/carro/editar', carro.id]">
           Editar
         </button>
 
-        <button class="btn btn-link" (click)="onDelete(carro.id)">
+        <button class="btn btn-danger" (click)="onDelete(carro.id)">
           Deletar
         </button>
       </td>

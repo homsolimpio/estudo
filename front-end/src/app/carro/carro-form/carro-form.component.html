@@ -1,4 +1,4 @@
-<h1 class="page-title">{{titulo}}</h1>
+<h3 class="page-title">{{titulo}}</h3>
 
 <form [formGroup]="carroForm">
 
@@ -62,15 +62,12 @@
     </div>
 
   </div>
-  <div class="panel-footer" >
-
-    <button class="btn btn-primary" [routerLink]="['/carro/editar', carro.id]"
-    *ngIf="carroForm.disabled">Editar</button>
+  <div class="align panel-footer" >
 
     <button class="btn btn-success" (click)="onSave(carroForm.value)"
     *ngIf="!carroForm.disabled">Salvar</button>
 
-    <button class="btn btn-default ml-2"
+    <button class="btn btn-secondary ml-2"
     routerLink="/pais">Cancelar</button>
   </div>
 </div>
