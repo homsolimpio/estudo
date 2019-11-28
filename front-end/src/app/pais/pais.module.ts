@@ -10,7 +10,7 @@ import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({
-  declarations: [PaisListComponent, PaisFormComponent, ],
+  declarations: [PaisListComponent, PaisFormComponent,],
   imports: [
     CommonModule,
     PaisRoutingModule,

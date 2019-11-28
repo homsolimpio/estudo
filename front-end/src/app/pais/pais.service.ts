@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Pais } from 'src/app/pais/pais';
@@ -19,22 +19,20 @@ export class PaisService {
 
   constructor(private http: HttpClient) { }
 
-  findAll(): Observable<Pais[]>{
+  findAll(): Observable<Pais[]> {
     return this.http.get<Pais[]>(`${this.url}`);
   }
-  findById(id: number): Observable<Pais>{
+  findById(id: number): Observable<Pais> {
     return this.http.get<Pais>(`${this.url}/${id}`);
   }
-  save(pais: Pais): Observable<Pais>{
-    if(pais.id){
+  save(pais: Pais): Observable<Pais> {
+    if (pais.id) {
       return this.http.put<Pais>(`${this.url}`, JSON.stringify(pais), httpOptions);
     } else {
-      return this.http.post<Pais>(`${this.url}`, JSON.stringify(pais),httpOptions);
+      return this.http.post<Pais>(`${this.url}`, JSON.stringify(pais), httpOptions);
     }
   }
-  deleteById(id: number): Observable<any>{
+  deleteById(id: number): Observable<any> {
     return this.http.delete(`${this.url}/${id}`);
   }
-
-
 }
