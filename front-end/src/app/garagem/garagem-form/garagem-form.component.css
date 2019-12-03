@@ -13,7 +13,11 @@
   margin: 10px;
 }
 .margin{
-  padding-right: 20px;
+  padding-right: 25px;
   padding-bottom : 20px;
   margin: none;
+}
+.padrao{
+  margin: none !important;
+  padding-top: 10px;
 }
