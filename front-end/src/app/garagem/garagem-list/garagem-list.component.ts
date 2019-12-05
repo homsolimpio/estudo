@@ -28,6 +28,7 @@ export class GaragemListComponent implements OnInit {
       .subscribe(() => {
         //Remove a garagem da lista
         this.garagens = this.garagens.filter(garagem => garagem.id !== id);
+        this.tabelaVazia(this.garagens.length);
       });
   }
 
