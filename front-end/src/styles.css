@@ -11,21 +11,21 @@ body{
     border-left: none !important;
     border-top: none !important;
     align-items: center !important;
-  }
-  .panel-default{
+}
+.panel-default{
     border-radius: 10px;
     background: white;
-  }
-  .row{
+}
+.row{
     margin: 10px;
-  }
-  .margin-button{
+}
+.margin-button{
     padding-right: 25px;
     padding-bottom : 20px;
     margin: none;
-  }
-  .padding-top{
+}
+.padding-top{
     margin: none !important;
     padding-top: 15px;
-  }
+}
   

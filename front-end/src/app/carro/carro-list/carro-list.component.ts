@@ -10,20 +10,32 @@ import { CarroService } from 'src/app/carro/carro.service';
 export class CarroListComponent implements OnInit {
 
   carros: Carro[];
-
+  arrayVazio: boolean;
+  titulo: string = "Lista de Carros";
   constructor(private carroService: CarroService) { }
 
   ngOnInit() {
     this.carroService.findAll()
-    .subscribe( carros => this.carros = carros);
+      .subscribe(carros => {
+        this.carros = carros
+        this.tabelaVazia(this.carros.length);
+      });
   }
 
   onDelete(id: number) {
     this.carroService.deleteById(id)
-    .subscribe(() => {
-      console.log("Carro deletado!!!");
-      //Remove carro da lista
-      this.carros = this.carros.filter(carro => carro.id !== id);
-    });
+      .subscribe(() => {
+        console.log("Carro deletado!!!");
+        //Remove carro da lista
+        this.carros = this.carros.filter(carro => carro.id !== id);
+      });
+  }
+
+  tabelaVazia(arrayLength: number) {
+    if (arrayLength == 0) {
+      this.arrayVazio = true;
+    } else {
+      this.arrayVazio = false;
+    }
   }
 }

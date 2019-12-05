@@ -1,9 +1,13 @@
 <div>
-  <h3 class="page-title">Garagem</h3>
+  <div class="row">
+    <div class="titulo">
+      <h3 class="page-title">{{ titulo }}</h3>
+    </div>
+  </div>
   <div>
 
     <button class="btn btn-primary m-3" routerLink="/garagem/novo">
-      Cadastrar 
+      Cadastrar
     </button>
   </div>
 
@@ -31,3 +35,6 @@
     </tr>
   </tbody>
 </table>
+<div *ngIf="arrayVazio == true" class="col-md-12 text-center">
+  Não consta dados na tabela
+</div>

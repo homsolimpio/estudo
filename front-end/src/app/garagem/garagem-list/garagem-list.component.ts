@@ -11,19 +11,31 @@ export class GaragemListComponent implements OnInit {
 
   //Declarações de variaveis
   garagens: Garagem[];
-
+  arrayVazio: boolean;
+  titulo: string = "Lista de Garagens";
   constructor(private garagemService: GaragemService) { }
 
   ngOnInit() {
     this.garagemService.findAll()
-    .subscribe(garagens => this.garagens = garagens);
+      .subscribe(garagens => {
+        this.garagens = garagens
+        this.tabelaVazia(this.garagens.length);
+      });
   }
 
   onDelete(id: number) {
     this.garagemService.deleteById(id)
-    .subscribe(() => {
-      //Remove a garagem da lista
-      this.garagens = this.garagens.filter(garagem => garagem.id !== id);
-    });
+      .subscribe(() => {
+        //Remove a garagem da lista
+        this.garagens = this.garagens.filter(garagem => garagem.id !== id);
+      });
+  }
+
+  tabelaVazia(arrayLength: number) {
+    if (arrayLength == 0) {
+      this.arrayVazio = true;
+    } else {
+      this.arrayVazio = false;
+    }
   }
 }
