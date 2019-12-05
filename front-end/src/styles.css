@@ -5,3 +5,27 @@ body{
 .align{
     text-align: right;
 }
+.titulo{
+    border-bottom: 3px solid rgba(0, 0, 0, 0.274) !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    align-items: center !important;
+  }
+  .panel-default{
+    border-radius: 10px;
+    background: white;
+  }
+  .row{
+    margin: 10px;
+  }
+  .margin-button{
+    padding-right: 25px;
+    padding-bottom : 20px;
+    margin: none;
+  }
+  .padding-top{
+    margin: none !important;
+    padding-top: 15px;
+  }
+  

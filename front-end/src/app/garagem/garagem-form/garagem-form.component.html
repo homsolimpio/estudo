@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="border">
+  <div class="titulo">
     <h3 class="page-title">{{ titulo }}</h3>
   </div>
 </div>
@@ -8,7 +8,7 @@
 
   <div class="panel panel-default">
     <div class="panel-body">
-      <div class="row padrao">
+      <div class="row padding-top">
         <!-- Cria uma Linha-->
         <div class="col-md-6 col-lg-4">
           <!-- Coluna do campo nome-->
@@ -74,7 +74,7 @@
 
     </div><!-- fim panel-body-->
     <div class="align panel-footer">
-      <div class="margin">
+      <div class="margin-button">
         <button class="btn btn-success" (click)="onSave(garagemForm.value)" *ngIf="!garagemForm.disabled">
           Salvar
         </button>
